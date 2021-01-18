@@ -9,7 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Actor
 {
     int health = 20;
-    int damage = 5;
+    int damage = 10;
+    int speed = 1;
     public void setDamage( int dam)
     {
         damage = dam;
@@ -26,6 +27,7 @@ public class Enemy extends Actor
     {
         chase(1);
         getHit();
+        
     }    
     public void chase(int a)
     {
@@ -33,6 +35,7 @@ public class Enemy extends Actor
         turnTowards(player.getX(), player.getY());
         move(a);
     }
+   
     public void getHit()
     {
         if( isTouching(Project.class))
@@ -45,4 +48,5 @@ public class Enemy extends Actor
             }
         }
     }
+   
 }

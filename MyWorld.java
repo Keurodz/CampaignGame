@@ -24,6 +24,15 @@ public class MyWorld extends World
     public void act()
     {
         showText("Mana: " + player.getMana() / 10, 50, 25);
+        showText("Health: " + player.getHealth(), 50, 50);
+        
+    }
+    public void gameOver()
+    {
+        if ( player.getDead() == true)
+        {
+            showText("You died" , getWidth()/2, getHeight()/2);
+        }
     }
     /**
      * Prepare the world for the start of the program.
@@ -31,5 +40,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+        Enemy enemy = new Enemy();
+        addObject(enemy,555,164);
     }
 }

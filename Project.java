@@ -9,9 +9,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Project extends Actor
 {
     int speed = 15;
+    int cost = 75;
     public Project()
     {
         getImage().scale(30,30);
+    }
+    public int getCost()
+    {
+        return cost;
+    }
+    public void setCost( int a )
+    {
+        cost = a;
     }
     /**
      * Act - do whatever the Project wants to do. This method is called whenever
